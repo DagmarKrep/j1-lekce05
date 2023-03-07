@@ -2,12 +2,13 @@ package cz.czechitas.lekce5.model;
 
 import java.util.Objects;
 
-public class Osoba {
+    public class Osoba {
     private String jmeno;
     private String prijmeni;
     private String rodneCislo;
-
     private Telefon telefon;
+    private String pracovniEmail;
+    private String soukromyEmail;
 
     public void setJmeno(String jmeno) {
         Objects.requireNonNull(jmeno);
@@ -63,5 +64,33 @@ public class Osoba {
     public String toString() {
         return jmeno + " " + prijmeni + " (" + rodneCislo + ")";
     }
+
+
+    public String getPracovniEmail() {
+        return pracovniEmail;
+    }
+
+    public void setPracovniEmail(String pracovniEmail) {
+        Objects.requireNonNull(pracovniEmail);
+        if (pracovniEmail.isBlank()) {
+            System.err.println("Pole 'Pracovní email' nemůže být prázdné.");
+            return;
+        }
+        this.pracovniEmail = pracovniEmail;
+    }
+
+    public String getSoukromyEmail() {
+        return soukromyEmail;
+    }
+
+    public void setSoukromyEmail(String soukromyEmail) {
+        Objects.requireNonNull(soukromyEmail);
+        if (soukromyEmail.isBlank()) {
+            System.err.println("Pole 'Soukromý email' nemůže být prázdné.");
+            return;
+        }
+        this.pracovniEmail = soukromyEmail;
+    }
+
 }
 

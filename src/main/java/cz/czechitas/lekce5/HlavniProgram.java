@@ -13,6 +13,13 @@ public class HlavniProgram {
     public static void main(String... args) {
         //TODO tady bude náš kód
 
+        Osoba Manka = new Osoba();
+        ...
+
+        Adresa Raholec = new Adresa();
+        Raholec.setUlice();
+        Manka.setAdresa(Raholec);
+
         System.out.println("Slavnostně přísahám, že jsem připraven ke každé špatnosti.");
     }
 
