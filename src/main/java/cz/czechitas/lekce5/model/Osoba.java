@@ -5,11 +5,17 @@ import java.util.Objects;
     public class Osoba {
     private String jmeno;
     private String prijmeni;
+    private boolean zena;
+    private boolean muz;
     private String rodneCislo;
     private Telefon telefon;
     private String pracovniEmail;
     private String soukromyEmail;
 
+
+    public String getJmeno() {
+            return jmeno;
+        }
     public void setJmeno(String jmeno) {
         Objects.requireNonNull(jmeno);
         if (jmeno.isBlank()) {
@@ -19,13 +25,9 @@ import java.util.Objects;
         this.jmeno = jmeno;
     }
 
-    public String getJmeno() {
-        return jmeno;
-    }
-
     public String getPrijmeni() {
-        return prijmeni;
-    }
+            return prijmeni;
+        }
 
     public void setPrijmeni(String prijmeni) {
         Objects.requireNonNull(prijmeni);
@@ -34,6 +36,26 @@ import java.util.Objects;
             return;
         }
         this.prijmeni = prijmeni;
+    }
+
+    public String getCeleJmeno() {
+        return jmeno + " " + prijmeni;
+    }
+
+    public boolean isZena() {
+        return this.zena;
+    }
+
+    public void setZena(boolean zena) {
+        this.zena = zena;
+    }
+
+    public boolean isMuz() {
+        return muz;
+    }
+
+    public void setMuz(boolean muz) {
+        this.muz = muz;
     }
 
     public String getRodneCislo() {
@@ -61,11 +83,6 @@ import java.util.Objects;
         this.telefon = telefon;
     }
 
-    public String toString() {
-        return jmeno + " " + prijmeni + " (" + rodneCislo + ")";
-    }
-
-
     public String getPracovniEmail() {
         return pracovniEmail;
     }
@@ -90,7 +107,12 @@ import java.util.Objects;
             return;
         }
         this.pracovniEmail = soukromyEmail;
+        }
+
+        public String toString() {
+        return jmeno + " " + prijmeni + " (" + rodneCislo + ")";
     }
+
 
 }
 

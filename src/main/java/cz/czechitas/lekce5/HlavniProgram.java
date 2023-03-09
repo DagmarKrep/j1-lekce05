@@ -1,5 +1,8 @@
 package cz.czechitas.lekce5;
 
+import cz.czechitas.lekce5.model.Osoba;
+import cz.czechitas.lekce5.model.Telefon;
+
 /**
  * Hlaví třída pro lekci 5.
  */
@@ -13,7 +16,10 @@ public class HlavniProgram {
     public static void main(String... args) {
         //TODO tady bude náš kód
 
-        Osoba Manka = new Osoba();
+        Osoba manka = new Osoba();
+        manka.setJmeno("Manka");
+        Telefon mankyTelefon = new Telefon();
+
         ...
 
         Adresa Raholec = new Adresa();
