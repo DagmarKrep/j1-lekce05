@@ -6,6 +6,7 @@ public class Telefon {
     private String predcisli;
     private String telefonniCislo;
 
+
     public String getPredcisli() {
         return predcisli;
     }
@@ -26,4 +27,10 @@ public class Telefon {
         }
         this.telefonniCislo = telefonniCislo;
     }
+
+    @Override
+    public String toString() {
+        return predcisli + ' ' + telefonniCislo;
+    }
+
 }

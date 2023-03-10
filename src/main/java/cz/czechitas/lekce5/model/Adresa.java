@@ -1,11 +1,9 @@
 package cz.czechitas.lekce5.model;
 
-import java.util.Objects;
-
 public class Adresa {
     private String ulice;
-    private String cisloDomu;
-    private String mesto;
+    private String castObce;
+    private String obec;
     private String psc;
 
     public String getUlice() {
@@ -16,20 +14,20 @@ public class Adresa {
         this.ulice = ulice;
     }
 
-    public String getCisloDomu() {
-        return cisloDomu;
+    public String getCastObce() {
+        return castObce;
     }
 
-    public void setCisloDomu(String cisloDomu) {
-        this.cisloDomu = cisloDomu;
+    public void setCastObce(String castObce) {
+        this.castObce = castObce;
     }
 
-    public String getMesto() {
-        return mesto;
+    public String getObec() {
+        return obec;
     }
 
-    public void setMesto(String mesto) {
-        this.mesto = mesto;
+    public void setObec(String obec) {
+        this.obec = obec;
     }
 
     public String getPsc() {
@@ -39,4 +37,10 @@ public class Adresa {
     public void setPsc(String psc) {
         this.psc = psc;
     }
+
+    @Override
+    public String toString() {
+        return "Adresa: " + ulice + ", " + castObce + ", " + obec + ", " + psc + ".";
+    }
+
 }

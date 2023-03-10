@@ -12,10 +12,21 @@ import java.util.Objects;
     private String pracovniEmail;
     private String soukromyEmail;
 
+        public Adresa getAdresa() {
+            return adresa;
+        }
+
+        public void setAdresa(Adresa adresa) {
+            this.adresa = adresa;
+        }
+
+        private Adresa adresa;
+
 
     public String getJmeno() {
             return jmeno;
         }
+
     public void setJmeno(String jmeno) {
         Objects.requireNonNull(jmeno);
         if (jmeno.isBlank()) {
@@ -92,7 +103,11 @@ import java.util.Objects;
         if (pracovniEmail.isBlank()) {
             System.err.println("Pole 'Pracovní email' nemůže být prázdné.");
             return;
-        }
+            }
+        if (!pracovniEmail.contains("@")) {
+            System.err.println("Pracovni email musí obsahovat @.");
+            return;
+            }
         this.pracovniEmail = pracovniEmail;
     }
 
@@ -106,7 +121,11 @@ import java.util.Objects;
             System.err.println("Pole 'Soukromý email' nemůže být prázdné.");
             return;
         }
-        this.pracovniEmail = soukromyEmail;
+        if (!soukromyEmail.contains("@")) {
+            System.err.println("Soukromy email musí obsahovat @.");
+            return;
+        }
+        this.soukromyEmail = soukromyEmail;
         }
 
         public String toString() {
