@@ -1,5 +1,6 @@
 package cz.czechitas.lekce5;
 
+import cz.czechitas.lekce5.model.Adresa;
 import cz.czechitas.lekce5.model.Osoba;
 import cz.czechitas.lekce5.model.Telefon;
 
@@ -34,24 +35,16 @@ public class HlavniProgram {
         manka.setTelefon(mankyTelefon);
         manka.setPracovniEmail("manka@jicin.cz");
         manka.setSoukromyEmail("manka@raholec.cz");
-        manka.setAdresa(Adresa);
+        manka.setAdresa(mankyAdresa);
 
-//        Adresa Raholec = new Adresa();
-//        Raholec.setUlice();
-//        manka.setAdresa(Raholec);
-
-
-        System.out.println(manka.getCeleJmeno());
-        System.out.println("Telefon: "+ manka.getTelefon());
         System.out.println(manka);
+        System.out.println("Cele jmeno: " + manka.getCeleJmeno());
+        System.out.println("Telefon: "+ manka.getTelefon());
         System.out.println("Soukromy email: "+ manka.getSoukromyEmail());
         System.out.println("Pracovni email: "+ manka.getPracovniEmail());
+        System.out.println(manka.getAdresa());
 
 //        System.out.println("Telefon: "+ manka.getTelefon().getTelefonniCislo());
-//
-//        Adresa Raholec = new Adresa();
-//        Raholec.setUlice();
-//        Manka.setAdresa(Raholec);
 
         System.out.println("Slavnostně přísahám, že jsem připraven ke každé špatnosti.");
     }
